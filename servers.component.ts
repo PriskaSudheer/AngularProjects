@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { createDecipher } from 'crypto';
 
 @Component({
   //selector:' [app-servers]',
@@ -12,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   allowNewServer=false;
+  ServerCreationStatus="No Server Created";
   constructor() {
     setTimeout( ()=>{
       this.allowNewServer=true;
@@ -19,6 +21,9 @@ export class ServersComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+  onCreateServer(){
+    this.ServerCreationStatus="Server created";
   }
 
 }
