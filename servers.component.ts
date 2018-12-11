@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms'; 
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ServersComponent implements OnInit {
 
   allowNewServer = false;
   ServerCreationStatus = "No Server Created";
-  serverName='';
+  serverName="Test Server";
 
   constructor() {
     setTimeout(() => {
